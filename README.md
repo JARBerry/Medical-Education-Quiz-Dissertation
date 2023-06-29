@@ -14,3 +14,8 @@ Technical key features :
 • Use of the AMBOSS question bank for quality questions
 
 • Achieved 88% in my dissertation
+
+(https://github.com/JARBerry/Medical-Education-Quiz-Dissertation/blob/main/Screenshot%20Diss%20App.png)
+
+
+
