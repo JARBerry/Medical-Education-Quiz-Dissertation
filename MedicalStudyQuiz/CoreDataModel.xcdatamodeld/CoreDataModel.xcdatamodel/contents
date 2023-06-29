@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Quiz" representedClassName="Quiz" syncable="YES" codeGenerationType="class">
+        <attribute name="answer" optional="YES" attributeType="String"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <relationship name="optionsList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QuizOption" inverseName="quiz" inverseEntity="QuizOption"/>
+        <relationship name="quizResults" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QuizResult" inverseName="quiz" inverseEntity="QuizResult"/>
+    </entity>
+    <entity name="QuizOption" representedClassName="QuizOption" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="option" optional="YES" attributeType="String"/>
+        <attribute name="optionId" optional="YES" attributeType="String"/>
+        <relationship name="quiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="optionsList" inverseEntity="Quiz"/>
+        <relationship name="quizResults" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QuizResult" inverseName="optionsList" inverseEntity="QuizResult"/>
+    </entity>
+    <entity name="QuizResult" representedClassName="QuizResult" syncable="YES" codeGenerationType="class">
+        <attribute name="iscorrect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="selectedOption" optional="YES" attributeType="String"/>
+        <relationship name="optionsList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QuizOption" inverseName="quizResults" inverseEntity="QuizOption"/>
+        <relationship name="quiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="quizResults" inverseEntity="Quiz"/>
+    </entity>
+</model>
